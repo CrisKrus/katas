@@ -6,13 +6,13 @@ import unittest
 # "1-10,14, 20-25:2" -> [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 14, 20, 22, 24]
 
 def range_parser(ranges):
-    result = ranges.split(',')
+    numbers = ranges.split(',')
 
-    foo = []
-    for n in result:
-        foo.append(int(n))
+    result = []
+    for n in numbers:
+        result.append(int(n))
 
-    return foo
+    return result
 
 
 class RangeParser(unittest.TestCase):
