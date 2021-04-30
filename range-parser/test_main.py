@@ -20,8 +20,11 @@ def range_parser(ranges):
 
 def add_range_to_list(input_range, result):
     start, end = input_range.split('-')
+    step = 1
+    if ':' in end:
+        end, step = end.split(':')
 
-    numbers = range(int(start), int(end) + 1)
+    numbers = range(int(start), int(end) + 1, int(step))
     for n in numbers:
         add_number_to_list(n, result)
 
@@ -53,6 +56,12 @@ class RangeParser(unittest.TestCase):
         result = range_parser("2-5, 7-11")
 
         expected = [2, 3, 4, 5, 7, 8, 9, 10, 11]
+        self.assertEqual(expected, result)
+
+    def test_single_range_with_steps(self):
+        result = range_parser("2-10:2")
+
+        expected = [2, 4, 6, 8, 10]
         self.assertEqual(expected, result)
 
 
