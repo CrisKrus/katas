@@ -71,6 +71,12 @@ class RangeParser(unittest.TestCase):
         expected = [2, 4, 6, 8, 10]
         self.assertEqual(expected, result)
 
+    def test_all_cases_together(self):
+        result = range_parser("1-10,14, 20-25:2")
+
+        expected = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 14, 20, 22, 24]
+        self.assertEqual(expected, result)
+
 
 if __name__ == '__main__':
     unittest.main()
