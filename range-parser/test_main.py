@@ -10,7 +10,13 @@ def range_parser(ranges):
 
     result = []
     for n in numbers:
-        result.append(int(n))
+        if n.isdigit():
+            result.append(int(n))
+        else:
+            start, end = n.split('-')
+            ra = range(int(start), int(end) + 1)
+            for r in ra:
+                result.append(int(r))
 
     return result
 
@@ -26,6 +32,12 @@ class RangeParser(unittest.TestCase):
         result = range_parser("2,3,5")
 
         expected = [2, 3, 5]
+        self.assertEqual(expected, result)
+
+    def test_single_range(self):
+        result = range_parser("2-5")
+
+        expected = [2, 3, 4, 5]
         self.assertEqual(expected, result)
 
 
