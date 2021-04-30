@@ -19,14 +19,21 @@ def range_parser(ranges):
 
 
 def add_range_to_list(input_range, result):
-    start, end = input_range.split('-')
-    step = 1
-    if ':' in end:
-        end, step = end.split(':')
+    end, start, step = format_range(input_range)
 
     numbers = range(int(start), int(end) + 1, int(step))
     for n in numbers:
         add_number_to_list(n, result)
+
+
+def format_range(input_range):
+    step = 1
+    start, end = input_range.split('-')
+
+    if ':' in end:
+        end, step = end.split(':')
+
+    return end, start, step
 
 
 def add_number_to_list(number, numbers):
