@@ -49,6 +49,12 @@ class RangeParser(unittest.TestCase):
         expected = [2, 3, 4, 5]
         self.assertEqual(expected, result)
 
+    def test_multiple_range(self):
+        result = range_parser("2-5, 7-11")
+
+        expected = [2, 3, 4, 5, 7, 8, 9, 10, 11]
+        self.assertEqual(expected, result)
+
 
 if __name__ == '__main__':
     unittest.main()
