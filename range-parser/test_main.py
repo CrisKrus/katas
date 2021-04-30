@@ -13,12 +13,17 @@ def range_parser(ranges):
         if n.isdigit():
             add_number_to_list(n, result)
         else:
-            start, end = n.split('-')
-            ra = range(int(start), int(end) + 1)
-            for r in ra:
-                add_number_to_list(r, result)
+            add_range_to_list(n, result)
 
     return result
+
+
+def add_range_to_list(input_range, result):
+    start, end = input_range.split('-')
+
+    numbers = range(int(start), int(end) + 1)
+    for n in numbers:
+        add_number_to_list(n, result)
 
 
 def add_number_to_list(number, numbers):
