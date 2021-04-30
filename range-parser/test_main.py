@@ -11,14 +11,18 @@ def range_parser(ranges):
     result = []
     for n in numbers:
         if n.isdigit():
-            result.append(int(n))
+            add_number_to_list(n, result)
         else:
             start, end = n.split('-')
             ra = range(int(start), int(end) + 1)
             for r in ra:
-                result.append(int(r))
+                add_number_to_list(r, result)
 
     return result
+
+
+def add_number_to_list(number, numbers):
+    numbers.append(int(number))
 
 
 class RangeParser(unittest.TestCase):
