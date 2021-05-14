@@ -13,17 +13,8 @@ def fill_char_frequency(current_char_index, characters, char_frequency):
     return fill_char_frequency(current_char_index + 1, characters, char_frequency)
 
 
-def first_non_repeating_letter(charecters):
-    # selecciono primer caracter
-    # cuento apariciones en la cadena
-    # add to dictionary
-    # selecciono siguiente caracter
-    # busco en dicctionario si existe
-    # si existe paso al siguiente
-    # si no cuento
-    # reviso el diccionario y me quedo con los caracteres que solo aparece una vez
-    # busco que caracter aparece antes
-    char_frequency = get_char_frequency(charecters)
+def first_non_repeating_letter(characters):
+    char_frequency = get_char_frequency(characters)
     frequency_one_chars = get_frequency_one_characters(char_frequency)
 
     for character in frequency_one_chars:
