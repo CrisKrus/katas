@@ -2,6 +2,8 @@ import unittest
 
 
 def first_non_repeating_letter(letters):
+    if len(letters) > 1:
+        return ""
     return letters
 
 # X "a" -> "a"
