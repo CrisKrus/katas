@@ -44,12 +44,6 @@ def get_frequency_one_characters(char_frequency):
     return frequency_one_chars
 
 
-# X "a" -> "a"
-# X "aa" -> ""
-# X "stress" -> "t", since the letter t only occurs once in the string, and occurs first in the string.
-#   "sTreSS" -> "T"
-
-
 class Kata(unittest.TestCase):
     def test_one_letter_should_result_same_letter(self):
         first_char = first_non_repeating_letter("a")
