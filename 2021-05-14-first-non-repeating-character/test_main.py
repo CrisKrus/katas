@@ -23,9 +23,8 @@ def first_non_repeating_letter(letters):
     # si no cuento
     # reviso el diccionario y me quedo con los caracteres que solo aparece una vez
     # busco que caracter aparece antes
-    char_frequency = {}
-    fill_char_frequency(0, letters, char_frequency)
-    frequency_one_chars = get_frquency_one_characters(char_frequency)
+    char_frequency = get_char_frequency(letters)
+    frequency_one_chars = get_frequency_one_characters(char_frequency)
 
     for character in frequency_one_chars:
         return character
@@ -33,7 +32,13 @@ def first_non_repeating_letter(letters):
     return ""
 
 
-def get_frquency_one_characters(char_frequency):
+def get_char_frequency(letters):
+    char_frequency = {}
+    fill_char_frequency(0, letters, char_frequency)
+    return char_frequency
+
+
+def get_frequency_one_characters(char_frequency):
     frequency_one_chars = []
     for character in char_frequency:
         if char_frequency[character] == 1:
