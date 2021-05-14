@@ -1,19 +1,19 @@
 import unittest
 
 
-def fill_char_frequency(current_char_index, characters, dictionary):
+def fill_char_frequency(current_char_index, characters, char_frequency):
     if len(characters) is current_char_index:
-        return dictionary
+        return char_frequency
 
     character = characters[current_char_index]
-    if character not in dictionary:
+    if character not in char_frequency:
         frequency = characters.count(character)
-        dictionary[character] = frequency
+        char_frequency[character] = frequency
 
-    return fill_char_frequency(current_char_index + 1, characters, dictionary)
+    return fill_char_frequency(current_char_index + 1, characters, char_frequency)
 
 
-def first_non_repeating_letter(letters):
+def first_non_repeating_letter(charecters):
     # selecciono primer caracter
     # cuento apariciones en la cadena
     # add to dictionary
@@ -23,7 +23,7 @@ def first_non_repeating_letter(letters):
     # si no cuento
     # reviso el diccionario y me quedo con los caracteres que solo aparece una vez
     # busco que caracter aparece antes
-    char_frequency = get_char_frequency(letters)
+    char_frequency = get_char_frequency(charecters)
     frequency_one_chars = get_frequency_one_characters(char_frequency)
 
     for character in frequency_one_chars:
