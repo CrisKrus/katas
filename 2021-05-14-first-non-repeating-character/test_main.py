@@ -43,8 +43,8 @@ def get_frequency_one_characters(char_frequency):
 
 # X "a" -> "a"
 # X "aa" -> ""
-#   "stress" -> "t", since the letter t only occurs once in the string, and occurs first in the string.
-#   "moonmen" -> "e"
+# X "stress" -> "t", since the letter t only occurs once in the string, and occurs first in the string.
+#   "sTreSS" -> "T"
 
 
 class Kata(unittest.TestCase):
@@ -64,6 +64,12 @@ class Kata(unittest.TestCase):
         first_char = first_non_repeating_letter("stress")
 
         expected = "t"
+        self.assertEqual(expected, first_char)
+
+    def test_multiple_letters_in_multiple_cases_result_on_first_non_repeated_letter(self):
+        first_char = first_non_repeating_letter("sTreSS")
+
+        expected = "T"
         self.assertEqual(expected, first_char)
 
 
