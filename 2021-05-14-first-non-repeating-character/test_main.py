@@ -6,9 +6,7 @@ def first_non_repeating_letter(characters):
     frequency_one_chars = get_frequency_one_characters(char_frequency)
     index_first_frequency_one_char = get_index_from_first_frequency_one_char(characters.lower(), frequency_one_chars)
 
-    if index_first_frequency_one_char == -1:
-        return ""
-    return characters[index_first_frequency_one_char]
+    return "" if index_first_frequency_one_char == -1 else characters[index_first_frequency_one_char]
 
 
 def fill_char_frequency(current_char_index, characters, char_frequency):
