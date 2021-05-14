@@ -2,7 +2,7 @@ import unittest
 
 
 def first_non_repeating_letter(letters):
-    return True
+    return letters
 
 # "a" -> "a"
 # "aa" -> ""
