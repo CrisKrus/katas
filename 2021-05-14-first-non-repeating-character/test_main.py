@@ -17,10 +17,13 @@ def first_non_repeating_letter(characters):
     char_frequency = get_char_frequency(characters)
     frequency_one_chars = get_frequency_one_characters(char_frequency)
 
+    return get_first_frequency_one_char(characters, frequency_one_chars)
+
+
+def get_first_frequency_one_char(characters, frequency_one_chars):
     for c in characters:
         if c in frequency_one_chars:
             return c
-
     return ""
 
 
