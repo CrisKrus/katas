@@ -61,9 +61,9 @@ class Kata(unittest.TestCase):
         self.assertEqual(expected, first_char)
 
     def test_multiple_letters_result_on_first_non_repeated_letter(self):
-        first_char = first_non_repeating_letter("aaaao")
+        first_char = first_non_repeating_letter("stress")
 
-        expected = "o"
+        expected = "t"
         self.assertEqual(expected, first_char)
 
 
