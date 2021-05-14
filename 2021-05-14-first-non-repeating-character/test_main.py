@@ -14,17 +14,20 @@ def fill_char_frequency(current_char_index, characters, char_frequency):
 
 
 def first_non_repeating_letter(characters):
-    char_frequency = get_char_frequency(characters)
+    char_frequency = get_char_frequency(characters.lower())
     frequency_one_chars = get_frequency_one_characters(char_frequency)
+    index_first_frequency_one_char = get_index_from_first_frequency_one_char(characters.lower(), frequency_one_chars)
 
-    return get_first_frequency_one_char(characters, frequency_one_chars)
+    if index_first_frequency_one_char == -1:
+        return ""
+    return characters[index_first_frequency_one_char]
 
 
-def get_first_frequency_one_char(characters, frequency_one_chars):
+def get_index_from_first_frequency_one_char(characters, frequency_one_chars):
     for c in characters:
         if c in frequency_one_chars:
-            return c
-    return ""
+            return characters.index(c)
+    return -1
 
 
 def get_char_frequency(letters):
