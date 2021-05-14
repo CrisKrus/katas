@@ -25,17 +25,21 @@ def first_non_repeating_letter(letters):
     # busco que caracter aparece antes
     char_frequency = {}
     fill_char_frequency(0, letters, char_frequency)
-
-    # elimina caracteres con mas de una aparicion
-    frequency_one_chars = []
-    for character in char_frequency:
-        if char_frequency[character] == 1:
-            frequency_one_chars.append(character)
+    frequency_one_chars = get_frquency_one_characters(char_frequency)
 
     for character in frequency_one_chars:
         return character
 
     return ""
+
+
+def get_frquency_one_characters(char_frequency):
+    frequency_one_chars = []
+    for character in char_frequency:
+        if char_frequency[character] == 1:
+            frequency_one_chars.append(character)
+    return frequency_one_chars
+
 
 # X "a" -> "a"
 # X "aa" -> ""
