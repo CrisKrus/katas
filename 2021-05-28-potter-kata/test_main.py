@@ -18,50 +18,25 @@ def potter_basket(book_list):
         return 0
 
     most_buy_book = sorted_book_list[0]
-
+    second_most_buy_book = 0
     pack_size = sorted_book_list.count(most_buy_book)
 
     if pack_size is 2:
         second_most_buy_book = sorted_book_list[2]
-
-        pack_amount = most_buy_book - second_most_buy_book
-        bill = calculate_discount(pack_size, pack_amount)
-
-        sorted_book_list = fill_list_with_value_until_index(sorted_book_list, second_most_buy_book, 1)
-
-        return bill + potter_basket(sorted_book_list)
-
     elif pack_size is 3:
         second_most_buy_book = sorted_book_list[3]
-        pack_amount = most_buy_book - second_most_buy_book
-
-        bill = calculate_discount(pack_size, pack_amount)
-
-        sorted_book_list = fill_list_with_value_until_index(sorted_book_list, second_most_buy_book, 2)
-
-        return bill + potter_basket(sorted_book_list)
-
     elif pack_size is 4:
         second_most_buy_book = sorted_book_list[4]
-        pack_amount = most_buy_book - second_most_buy_book
-
-        bill = calculate_discount(pack_size, pack_amount)
-
-        sorted_book_list = fill_list_with_value_until_index(sorted_book_list, second_most_buy_book, 3)
-
-        return bill + potter_basket(sorted_book_list)
-
     elif pack_size is 5:
         second_most_buy_book = 0
-        pack_amount = most_buy_book - second_most_buy_book
 
-        bill = calculate_discount(pack_size, pack_amount)
+    pack_amount = most_buy_book - second_most_buy_book
 
-        sorted_book_list = fill_list_with_value_until_index(sorted_book_list, second_most_buy_book, 4)
+    pack_bill = calculate_discount(pack_size, pack_amount)
 
-        return bill + potter_basket(sorted_book_list)
+    sorted_book_list = fill_list_with_value_until_index(sorted_book_list, second_most_buy_book, pack_size)
 
-    return sorted_book_list[0] * 8
+    return pack_bill + potter_basket(sorted_book_list)
 
 
 def calculate_discount(pack_size, pack_amount):
