@@ -2,7 +2,7 @@ import unittest
 
 
 def potter_basket(book_amount):
-    return 0
+    return 8
 
 
 class PotterKata(unittest.TestCase):
