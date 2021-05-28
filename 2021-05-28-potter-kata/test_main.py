@@ -1,13 +1,18 @@
 import unittest
 
 
-def potter_basket(book_amount):
-    return 8
+def potter_basket(book_list):
+    bill = 0
+
+    for book in book_list:
+        bill += book * 8
+
+    return bill
 
 
 class PotterKata(unittest.TestCase):
-    def test_should_calculate_one_book_price(self):
-        book_list = [0, 1, 0, 0, 0]
+    def test_should_calculate_multiple_books_price(self):
+        book_list = [0, 2, 0, 0, 0]
         # book_list2 = {
         #     'first': 0,
         #     'second': 1,
@@ -18,7 +23,7 @@ class PotterKata(unittest.TestCase):
 
         total_bill = potter_basket(book_list)
 
-        expected_price = 8
+        expected_price = 16
         self.assertEqual(expected_price, total_bill)
 
 
