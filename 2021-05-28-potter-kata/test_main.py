@@ -1,16 +1,6 @@
 import unittest
 
 
-def fill_list_with_value_until_index(list_to_fill, value, last_index):
-    res = []
-
-    for i in range(len(list_to_fill)):
-        current_value = list_to_fill[i]
-        res.append(value) if i <= last_index else res.append(current_value)
-
-    return res
-
-
 def potter_basket(book_list):
     sorted_book_list = sorted(book_list, reverse=True)
 
@@ -37,6 +27,16 @@ def potter_basket(book_list):
     sorted_book_list = fill_list_with_value_until_index(sorted_book_list, second_most_buy_book, pack_size)
 
     return pack_bill + potter_basket(sorted_book_list)
+
+
+def fill_list_with_value_until_index(list_to_fill, value, last_index):
+    res = []
+
+    for i in range(len(list_to_fill)):
+        current_value = list_to_fill[i]
+        res.append(value) if i <= last_index else res.append(current_value)
+
+    return res
 
 
 def calculate_discount(pack_size, pack_amount):
