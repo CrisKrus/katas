@@ -8,17 +8,8 @@ def potter_basket(book_list):
         return 0
 
     most_buy_book = sorted_book_list[0]
-    second_most_buy_book = 0
     pack_size = sorted_book_list.count(most_buy_book)
-
-    if pack_size is 2:
-        second_most_buy_book = sorted_book_list[2]
-    elif pack_size is 3:
-        second_most_buy_book = sorted_book_list[3]
-    elif pack_size is 4:
-        second_most_buy_book = sorted_book_list[4]
-    elif pack_size is 5:
-        second_most_buy_book = 0
+    second_most_buy_book = find_second_most_buy_book(pack_size, sorted_book_list)
 
     pack_amount = most_buy_book - second_most_buy_book
 
@@ -27,6 +18,16 @@ def potter_basket(book_list):
     sorted_book_list = fill_list_with_value_until_index(sorted_book_list, second_most_buy_book, pack_size)
 
     return pack_bill + potter_basket(sorted_book_list)
+
+
+def find_second_most_buy_book(pack_size, sorted_book_list):
+    if pack_size is 2:
+        return sorted_book_list[2]
+    elif pack_size is 3:
+        return sorted_book_list[3]
+    elif pack_size is 4:
+        return sorted_book_list[4]
+    return 0
 
 
 def fill_list_with_value_until_index(list_to_fill, value, last_index):
@@ -55,16 +56,6 @@ def calculate_discount(pack_size, pack_amount):
         return bill * 0.75
 
     return bill
-
-
-# 2 books 5% discount
-# 3 books 10% discount
-# 4 books 20% discount
-# 5 books 25% discount
-
-# 1 0 0 0 0 1*8
-# 1 1 0 0 0 2*8-5
-# 2 1 1 0 0 1*8 + 3*8-10
 
 
 class PotterKata(unittest.TestCase):
@@ -106,6 +97,14 @@ class PotterKata(unittest.TestCase):
         total_bill = potter_basket(book_list)
 
         expected_price = 30
+        self.assertEqual(expected_price, total_bill)
+
+    def test_should_calculate_multiple_discount(self):
+        book_list = [2, 1, 2, 1, 2]
+
+        total_bill = potter_basket(book_list)
+
+        expected_price = 51.60
         self.assertEqual(expected_price, total_bill)
 
 
