@@ -41,6 +41,16 @@ def potter_basket(book_list):
 
         return bill + potter_basket(sorted_book_list)
 
+    if pack is 4:
+        rest = sorted_book_list[0] - sorted_book_list[4]
+        bill = rest * 8 * pack
+        bill -= bill * 0.2
+
+        sorted_book_list = fill_list_with_value_until_index(sorted_book_list, sorted_book_list[4], 3)
+        print(sorted_book_list)
+
+        return bill + potter_basket(sorted_book_list)
+
     return sorted_book_list[0] * 8
 
 # 2 books 5% discount
@@ -76,6 +86,14 @@ class PotterKata(unittest.TestCase):
         total_bill = potter_basket(book_list)
 
         expected_price = 21.6
+        self.assertEqual(expected_price, total_bill)
+
+    def test_should_calculate_20_percent_discount(self):
+        book_list = [1, 1, 0, 1, 1]
+
+        total_bill = potter_basket(book_list)
+
+        expected_price = 25.6
         self.assertEqual(expected_price, total_bill)
 
 
