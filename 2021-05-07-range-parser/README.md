@@ -15,4 +15,4 @@ Kata extraída del [repositorio de Lean Mind](https://github.com/lean-mind/katas
 
 ## Mi solución
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/0FPsQSAOGDw" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+[![Live coding kata](http://img.youtube.com/vi/0FPsQSAOGDw/0.jpg)](https://youtu.be/0FPsQSAOGDw)
