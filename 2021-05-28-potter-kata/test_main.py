@@ -19,39 +19,43 @@ def potter_basket(book_list):
 
     most_buy_book = sorted_book_list[0]
 
-    pack = sorted_book_list.count(most_buy_book)
+    pack_size = sorted_book_list.count(most_buy_book)
 
-    if pack is 2:
+    if pack_size is 2:
         second_most_buy_book = sorted_book_list[2]
 
-        bill = calculate_discount(pack, most_buy_book, second_most_buy_book)
+        pack_amount = most_buy_book - second_most_buy_book
+        bill = calculate_discount(pack_size, pack_amount)
 
         sorted_book_list = fill_list_with_value_until_index(sorted_book_list, second_most_buy_book, 1)
 
         return bill + potter_basket(sorted_book_list)
 
-    elif pack is 3:
+    elif pack_size is 3:
         second_most_buy_book = sorted_book_list[3]
+        pack_amount = most_buy_book - second_most_buy_book
 
-        bill = calculate_discount(pack, most_buy_book, second_most_buy_book)
+        bill = calculate_discount(pack_size, pack_amount)
 
         sorted_book_list = fill_list_with_value_until_index(sorted_book_list, second_most_buy_book, 2)
 
         return bill + potter_basket(sorted_book_list)
 
-    elif pack is 4:
+    elif pack_size is 4:
         second_most_buy_book = sorted_book_list[4]
+        pack_amount = most_buy_book - second_most_buy_book
 
-        bill = calculate_discount(pack, most_buy_book, second_most_buy_book)
+        bill = calculate_discount(pack_size, pack_amount)
 
         sorted_book_list = fill_list_with_value_until_index(sorted_book_list, second_most_buy_book, 3)
 
         return bill + potter_basket(sorted_book_list)
 
-    elif pack is 5:
+    elif pack_size is 5:
         second_most_buy_book = 0
+        pack_amount = most_buy_book - second_most_buy_book
 
-        bill = calculate_discount(pack, most_buy_book, second_most_buy_book)
+        bill = calculate_discount(pack_size, pack_amount)
 
         sorted_book_list = fill_list_with_value_until_index(sorted_book_list, second_most_buy_book, 4)
 
@@ -60,20 +64,19 @@ def potter_basket(book_list):
     return sorted_book_list[0] * 8
 
 
-def calculate_discount(pack, most_buy_book, second_most_buy_book):
-    rest = most_buy_book - second_most_buy_book
-    bill = rest * 8 * pack
+def calculate_discount(pack_size, pack_amount):
+    bill = pack_amount * 8 * pack_size
 
-    if pack is 2:
+    if pack_size is 2:
         return bill * 0.95
 
-    if pack is 3:
+    if pack_size is 3:
         return bill * 0.90
 
-    if pack is 4:
+    if pack_size is 4:
         return bill * 0.80
 
-    if pack is 5:
+    if pack_size is 5:
         return bill * 0.75
 
     return bill
