@@ -1,4 +1,4 @@
-# Potter kata
+## Potter kata
 
 Kata extraída del [repositorio](https://github.com/MikeDigitize/Potter-kata)
 
@@ -19,3 +19,7 @@ El cálculo del precio sería el siguiente:
 - un pack completo de 5 libros se le aplica un 25% de descuento (8 EUR * 5 libros) - 25% = 30 EUR
 - los tres restantes solamente un 10% de descuento (8 EUR * 3 libros) - 10% = 21,60
 - precio final 51,60
+
+## Mi solución
+
+[Código](test_main.py)

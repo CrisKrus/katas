@@ -1,4 +1,4 @@
-# First non repeating character
+## First non repeating character
 
 Kata extraída del [repositorio de Lean Mind](https://github.com/lean-mind/katas-formacion/tree/main/firstNonRepeatingCharacter)
 
@@ -12,5 +12,7 @@ Kata extraída del [repositorio de Lean Mind](https://github.com/lean-mind/katas
 [original-kata]:https://www.codewars.com/kata/52bc74d4ac05d0945d00054e
 
 ## Mi solución
+
+[Código](test_main.py)
 
 [![Live coding kata](http://img.youtube.com/vi/0SnvGYrAVzE/0.jpg)](https://youtu.be/0SnvGYrAVzE)

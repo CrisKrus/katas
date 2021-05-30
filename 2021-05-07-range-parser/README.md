@@ -1,3 +1,5 @@
+## Range parser
+
 Kata extraída del [repositorio de Lean Mind](https://github.com/lean-mind/katas-formacion/tree/main/rangeParser)
 
 ## Algunos ejemplos
