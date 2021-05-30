@@ -1,4 +1,4 @@
-# Kata name
+# First non repeating character
 
 Kata extraída del [repositorio de Lean Mind](https://github.com/lean-mind/katas-formacion/tree/main/firstNonRepeatingCharacter)
 

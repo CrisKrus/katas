@@ -1,4 +1,4 @@
-# Kata name
+# Potter kata
 
 Kata extraída del [repositorio](https://github.com/MikeDigitize/Potter-kata)
 
