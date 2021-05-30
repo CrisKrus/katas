@@ -18,3 +18,5 @@ Kata extraída del [repositorio de Lean Mind](https://github.com/lean-mind/katas
 [Código](test_main.py)
 
 [![Live coding kata](http://img.youtube.com/vi/0FPsQSAOGDw/0.jpg)](https://youtu.be/0FPsQSAOGDw)
+
+### [Inicio](../README.md)

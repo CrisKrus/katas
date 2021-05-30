@@ -11,6 +11,8 @@ Kata extraída del [repositorio de Lean Mind][kata]
 
 [![Live coding kata][youtube-image]][youtube-video]
 
+### [Inicio](../README.md)
+
 <!-- LINKS -->
 
 [kata]: https://github.com/lean-mind/katas-formacion/tree/main/rangeParser
