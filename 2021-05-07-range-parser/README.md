@@ -1,5 +1,3 @@
-# Range parser
-
 Kata extraída del [repositorio de Lean Mind](https://github.com/lean-mind/katas-formacion/tree/main/rangeParser)
 
 ## Algunos ejemplos
@@ -14,5 +12,7 @@ Kata extraída del [repositorio de Lean Mind](https://github.com/lean-mind/katas
 
 
 ## Mi solución
+
+[Código](test_main.py)
 
 [![Live coding kata](http://img.youtube.com/vi/0FPsQSAOGDw/0.jpg)](https://youtu.be/0FPsQSAOGDw)
