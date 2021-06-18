@@ -1,4 +1,4 @@
-## Kata name
+## Which are in
 
 Kata extraída de [codewars][kata]
 
@@ -26,5 +26,5 @@ return []
 
 [kata]: https://www.codewars.com/kata/550554fd08b86f84fe000a58
 [original-kata]:https://www.codewars.com/kata/550554fd08b86f84fe000a58
-[youtube-image]:http://img.youtube.com/vi/0FPsQSAOGDw/0.jpg
-[youtube-video]:https://youtu.be/0FPsQSAOGDw
+[youtube-image]:http://img.youtube.com/vi/8x2b1CSLns0/0.jpg
+[youtube-video]:https://youtu.be/8x2b1CSLns0
