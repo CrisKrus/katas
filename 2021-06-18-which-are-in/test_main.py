@@ -30,6 +30,15 @@ class Kata(unittest.TestCase):
         expected = ['arp', 'live', 'strong']
         self.assertEqual(expected, result)
 
+    def test_which_are_in2(self):
+        a1 = ["tarp", "mice", "bull"]
+        a2 = ["lively", "alive", "harp", "sharp", "armstrong"]
+
+        result = in_array(a1, a2)
+
+        expected = []
+        self.assertEqual(expected, result)
+
 
 if __name__ == '__main__':
     unittest.main()
