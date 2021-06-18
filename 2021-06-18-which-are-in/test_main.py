@@ -19,7 +19,6 @@ class Kata(unittest.TestCase):
         self.assertEqual(expected, result)
 
     def test_which_are_in(self):
-        self.skipTest('final check')
         a1 = ['arp', 'live', 'strong']
         a2 = ["lively", "alive", "harp", "sharp", "armstrong"]
 
