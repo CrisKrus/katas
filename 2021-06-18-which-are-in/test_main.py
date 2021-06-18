@@ -2,7 +2,10 @@ import unittest
 
 
 def in_array(list1, list2):
-    return True
+    for word in list1:
+        for word2 in list2:
+            if word in word2:
+                return [word]
 
 
 class Kata(unittest.TestCase):
