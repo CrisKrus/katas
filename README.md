@@ -17,3 +17,4 @@ con `sh run_test.sh`
 - [Range parser](2021-05-07-range-parser)
 - [First non repeating character](2021-05-14-first-non-repeating-character)
 - [Potter](2021-05-28-potter-kata)
+- [Which are in](2021-06-18-which-are-in)
