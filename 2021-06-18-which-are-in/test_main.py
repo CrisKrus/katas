@@ -3,10 +3,11 @@ import unittest
 
 def in_array(list1, list2):
     result = []
-    for word in list1:
+
+    for word1 in list1:
         for word2 in list2:
-            if word in word2 and word not in result:
-                result.append(word)
+            if word1 not in result and word1 in word2:
+                result.append(word1)
 
     return result
 
