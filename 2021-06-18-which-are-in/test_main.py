@@ -31,7 +31,16 @@ class Kata(unittest.TestCase):
         expected = ['arp', 'live', 'strong']
         self.assertEqual(expected, result)
 
-    def test_which_are_in2(self):
+    def test_result_should_be_ordered(self):
+        a1 = ['live', 'arp', 'strong']
+        a2 = ["lively", "alive", "harp", "sharp", "armstrong"]
+
+        result = in_array(a1, a2)
+
+        expected = ['arp', 'live', 'strong']
+        self.assertEqual(expected, result)
+
+    def test_no_matches_found(self):
         a1 = ["tarp", "mice", "bull"]
         a2 = ["lively", "alive", "harp", "sharp", "armstrong"]
 
