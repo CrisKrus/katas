@@ -9,6 +9,7 @@ def in_array(list1, list2):
             if word1 not in result and word1 in word2:
                 result.append(word1)
 
+    result.sort()
     return result
 
 
