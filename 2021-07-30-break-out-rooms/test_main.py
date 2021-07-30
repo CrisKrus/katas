@@ -20,7 +20,9 @@ def break_out_rooms(participants, room_sizes, rounds):
 class Kata(unittest.TestCase):
 
     def test_should_create_rooms_on_a_single_round(self):
-        participants = ['Jose Angel', 'Sara', 'Airan', 'Sosa', 'Ruben', 'Manu M', 'Cristian', 'Nazaret', 'Juan Antonio', 'Jorge', 'F. Mesa', 'Manuel P.', 'Noe', 'Kevin', 'Maria', 'Michael', 'Ulises', 'Ricardo', 'Ivan', 'Yazmina', 'Mireia']
+        participants = ['Jose Angel', 'Sara', 'Airan', 'Sosa', 'Ruben', 'Manu M', 'Cristian', 'Nazaret', 'Juan Antonio',
+                        'Jorge', 'F. Mesa', 'Manuel P.', 'Noe', 'Kevin', 'Maria', 'Michael', 'Ulises', 'Ricardo',
+                        'Ivan', 'Yazmina', 'Mireia']
 
         expected_rooms = [
             ['Jose Angel', 'Sara', 'Airan'],
@@ -34,18 +36,37 @@ class Kata(unittest.TestCase):
         rooms = break_out_rooms(participants, [3], 1)
         self.assertEqual(expected_rooms, rooms)
 
-# Round 2 - Rooms with 2+ people:
-#
-# Sosa - Maria
-# Noe - Ruben - Yodra
-# Mireia - Ricardo
-# Juan Antonio - Sara
-# F. Mesa - Nazaret
-# Crisitian - Manuel P.
-# Airan - Ulises
-# Jorge - Manu M.
-# Ivan - Kevin
-# Jose Angel - Michael
+    def test_should_create_rooms_on_multiple_rounds(self):
+        participants = ['Jose Angel', 'Sara', 'Airan', 'Sosa', 'Ruben', 'Manu M', 'Cristian', 'Nazaret', 'Juan Antonio',
+                        'Jorge', 'F. Mesa', 'Manuel P.', 'Noe', 'Kevin', 'Maria', 'Michael', 'Ulises', 'Ricardo',
+                        'Ivan', 'Yazmina', 'Mireia']
+
+        expected_rooms = [
+            [
+                ['Jose Angel', 'Sara', 'Airan'],
+                ['Sosa', 'Ruben', 'Manu M'],
+                ['Cristian', 'Nazaret', 'Juan Antonio'],
+                ['Jorge', 'F. Mesa', 'Manuel P.'],
+                ['Noe', 'Kevin', 'Maria'],
+                ['Michael', 'Ulises', 'Ricardo'],
+                ['Ivan', 'Yazmina', 'Mireia'],
+            ],
+            [
+                ['Sosa', 'Maria'],
+                ['Noe', 'Ruben', 'Yodra'],
+                ['Mireia', 'Ricardo'],
+                ['Juan Antonio', 'Sara'],
+                ['F. Mesa', 'Nazaret'],
+                ['Crisitian', 'Manuel P.'],
+                ['Airan', 'Ulises'],
+                ['Jorge', 'Manu M.'],
+                ['Ivan', 'Kevin'],
+                ['Jose Angel', 'Michael'],
+            ]
+        ]
+        rooms = break_out_rooms(participants, [3, 2], 2)
+        self.assertEqual(expected_rooms, rooms)
+
 
 # Round 3 - Rooms with 2+ people:
 #
