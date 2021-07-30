@@ -11,7 +11,7 @@ Kata extraída del [repositorio de Lean Mind][kata]
 
 [![Live coding kata][youtube-image]][youtube-video]
 
-### [Inicio](../README.md)
+### [Inicio](../.)
 
 <!-- LINKS -->
 
