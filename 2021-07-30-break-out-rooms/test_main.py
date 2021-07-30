@@ -1,8 +1,20 @@
 import unittest
 
 
-def break_out_rooms(participants, room_size, rounds):
-    return True
+def break_out_rooms(participants, room_sizes, rounds):
+    rooms = []
+    room_size = room_sizes[0]
+
+    room_amount = int(len(participants) / room_size)
+
+    group_start = 0
+    group_end = room_size
+    for i in range(room_amount):
+        rooms.append(participants[group_start:group_end])
+        group_start = group_end
+        group_end += room_size
+
+    return rooms
 
 
 class Kata(unittest.TestCase):
